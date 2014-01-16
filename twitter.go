@@ -53,12 +53,14 @@ import (
 const (
 	_GET  = iota
 	_POST = iota
+  BaseUrlV1 = "https://api.twitter.com/1"
+  BaseUrl = "https://api.twitter.com/1.1"
 )
 
 var oauthClient = oauth.Client{
-	TemporaryCredentialRequestURI: "http://api.twitter.com/oauth/request_token",
-	ResourceOwnerAuthorizationURI: "http://api.twitter.com/oauth/authenticate",
-	TokenRequestURI:               "http://api.twitter.com/oauth/access_token",
+	TemporaryCredentialRequestURI: "https://api.twitter.com/oauth/request_token",
+	ResourceOwnerAuthorizationURI: "https://api.twitter.com/oauth/authenticate",
+	TokenRequestURI:               "https://api.twitter.com/oauth/access_token",
 }
 
 type TwitterApi struct {
